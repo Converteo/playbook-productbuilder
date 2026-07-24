@@ -1,4 +1,5 @@
 ---
+# Prérequis manuel: Settings > Pages > Source = GitHub Actions
 name: Deploy documentation
 
 "on":
