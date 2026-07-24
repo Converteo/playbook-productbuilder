@@ -1,0 +1,58 @@
+---
+name: Content proposal
+description: Proposer un nouveau contenu pour le playbook
+title: "[Content proposal] "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexte
+      description: Quel besoin ou problème motive cette proposition ?
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objectif
+      description: Quel résultat concret souhaitez-vous obtenir ?
+    validations:
+      required: true
+  - type: textarea
+    id: readers
+    attributes:
+      label: Lecteurs visés
+      description: À qui s’adresse ce contenu ?
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Emplacement proposé (si connu)
+      description: Section/page cible si vous la connaissez déjà.
+    validations:
+      required: false
+  - type: textarea
+    id: outline
+    attributes:
+      label: Plan suggéré
+      description: Proposez un plan court en points clés.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Citez vos sources fiables (liens, références, documents).
+    validations:
+      required: true
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Souhaitez-vous contribuer à la rédaction ?
+      options:
+        - Oui
+        - Non
+    validations:
+      required: true

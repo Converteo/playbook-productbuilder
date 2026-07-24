@@ -1,0 +1,16 @@
+:root {
+  --md-default-fg-color: #1f2937;
+  --md-default-fg-color--light: #4b5563;
+  --md-default-bg-color: #ffffff;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0;
+}
+
+.md-content img {
+  max-width: 100%;
+  height: auto;
+}

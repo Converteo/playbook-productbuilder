@@ -1,0 +1,60 @@
+---
+site_name: Playbook Product Builder
+site_description: Le playbook collaboratif du Product Building par Converteo
+site_url: https://playbook-productbuilder.converteo.com/
+repo_name: ⚠️ Dépôt GitHub placeholder à remplacer
+repo_url: https://github.com/ORGANIZATION/REPOSITORY-TO-REPLACE
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+
+nav:
+  # Navigation minimale volontaire.
+  # La navigation complète sera générée/ajoutée lors de la migration Coda.
+  - Accueil: index.md
+
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.sections
+    - navigation.expand
+    - toc.follow
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Basculer en mode sombre
+    - scheme: slate
+      primary: blue grey
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Basculer en mode clair
+
+plugins:
+  - search:
+      lang: fr
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - assets/stylesheets/extra.css

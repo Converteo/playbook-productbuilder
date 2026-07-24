@@ -1,0 +1,57 @@
+---
+name: Validate documentation
+
+"on":
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Markdown linting
+        run: npx --yes markdownlint-cli "**/*.md" --ignore site --ignore .venv
+
+      - name: Validate YAML files
+        run: yamllint .
+
+      - name: Build MkDocs (strict)
+        run: mkdocs build --strict
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --exclude-mail
+            --accept 200,206,429
+            "**/*.md"
+            "docs/**/*.md"
+            mkdocs.yml
+
+      # Note: this workflow runs on pull_request (not pull_request_target),
+      # which avoids exposing repository secrets to code from forks.

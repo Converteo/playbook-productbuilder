@@ -1,0 +1,36 @@
+---
+name: Correction
+description: Signaler une erreur ou proposer une correction
+title: "[Correction] "
+labels:
+  - documentation
+body:
+  - type: input
+    id: page
+    attributes:
+      label: URL de page ou fichier Markdown
+      description: Indiquez l’URL publiée ou le chemin du fichier.
+      placeholder: docs/...
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Contenu actuel
+      description: Copiez/collez le passage concerné.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Correction proposée
+      description: Indiquez la version corrigée.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source justificative
+      description: Ajoutez une source fiable qui confirme la correction.
+    validations:
+      required: true

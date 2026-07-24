@@ -1,0 +1,11 @@
+# Remplacer les placeholders ci-dessous par les mainteneurs Converteo
+# ou équipes GitHub réelles (ex: @org/team-docs).
+
+* @MAINTAINER_OR_TEAM_TO_REPLACE
+
+docs/ @MAINTAINER_OR_TEAM_TO_REPLACE
+mkdocs.yml @MAINTAINER_OR_TEAM_TO_REPLACE
+.github/workflows/ @MAINTAINER_OR_TEAM_TO_REPLACE
+CONTRIBUTING.md @MAINTAINER_OR_TEAM_TO_REPLACE
+CODE_OF_CONDUCT.md @MAINTAINER_OR_TEAM_TO_REPLACE
+LICENSE @MAINTAINER_OR_TEAM_TO_REPLACE
